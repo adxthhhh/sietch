@@ -1,11 +1,14 @@
 import { Search, FolderOpen, BookOpen, CheckCircle, Lightbulb } from 'lucide-react';
 import Link from 'next/link';
-
+import ProfileMenu from '../components/ProfileMenu';
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center pt-24 px-6 relative z-10">
       
+      {/* 2. Injecting Profile Menu */}
+      <ProfileMenu />
+
       {/* Header Section */}
       <div className="text-center mb-12">
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-500">
