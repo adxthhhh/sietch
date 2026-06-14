@@ -11,10 +11,15 @@
 body {
   color: var(--color-foreground);
   background-color: var(--color-background);
-  background-image: 
-    radial-gradient(circle at 15% 50%, rgba(30, 27, 75, 0.4), transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(49, 46, 129, 0.3), transparent 25%);
+  
+  /* Point this exactly to your filename in the public folder */
+  background-image: url('/wallpaper2.jpg');
+  
+  /* These three rules ensure the image fits perfectly and doesn't scroll */
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 @layer utilities {
