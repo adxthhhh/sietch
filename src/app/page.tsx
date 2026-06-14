@@ -14,7 +14,7 @@ export default function Home() {
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-500">
           Sietch
         </h1>
-        <p className="text-neutral-400 text-lg">
+        <p className="text-neutral-200 text-lg">
           The S1/S2 Engineering Resource Vault.
         </p>
       </div>
@@ -22,7 +22,7 @@ export default function Home() {
       {/* Global Search Bar */}
       <div className="w-full max-w-3xl mb-16 relative">
         <div className="absolute inset-y-0 left-6 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 text-neutral-400" />
+          <Search className="h-5 w-5 text-neutral-200" />
         </div>
         <input
           type="text"
@@ -33,7 +33,7 @@ export default function Home() {
 
       {/* Quick Access Bento Grid */}
       <div className="w-full max-w-4xl">
-        <h2 className="text-sm font-semibold text-neutral-500 tracking-widest uppercase mb-6 pl-2">
+        <h2 className="text-sm font-semibold text-neutral-200 tracking-widest uppercase mb-6 pl-2">
           Quick Access
         </h2>
         
