@@ -1,65 +1,78 @@
-import Image from "next/image";
+import { Search, FolderOpen, BookOpen, CheckCircle, Lightbulb } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className="min-h-screen flex flex-col items-center pt-24 px-6 relative z-10">
+      
+      {/* Header Section */}
+      <div className="text-center mb-12">
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-500">
+          Sietch
+        </h1>
+        <p className="text-neutral-400 text-lg">
+          The S1/S2 Engineering Resource Vault.
+        </p>
+      </div>
+
+      {/* Global Search Bar */}
+      <div className="w-full max-w-3xl mb-16 relative">
+        <div className="absolute inset-y-0 left-6 flex items-center pointer-events-none">
+          <Search className="h-5 w-5 text-neutral-400" />
+        </div>
+        <input
+          type="text"
+          className="glass-card w-full py-5 pl-14 pr-6 text-lg text-white placeholder-neutral-500 outline-none focus:border-white/30 transition-all duration-300"
+          placeholder="Search Solid State Physics, PYQs, or modules..."
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      </div>
+
+      {/* Quick Access Bento Grid */}
+      <div className="w-full max-w-4xl">
+        <h2 className="text-sm font-semibold text-neutral-500 tracking-widest uppercase mb-6 pl-2">
+          Quick Access
+        </h2>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          
+          {/* Card 1 */}
+          <button className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
+            <FolderOpen className="w-8 h-8 text-neutral-300 group-hover:text-white transition-colors" />
+            <div className="text-center">
+              <h3 className="font-medium text-white">PYQs</h3>
+              <p className="text-xs text-neutral-400">Previous Years</p>
+            </div>
+          </button>
+
+          {/* Card 2 */}
+          <button className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
+            <BookOpen className="w-8 h-8 text-neutral-300 group-hover:text-white transition-colors" />
+            <div className="text-center">
+              <h3 className="font-medium text-white">Notes</h3>
+              <p className="text-xs text-neutral-400">Module-wise</p>
+            </div>
+          </button>
+
+          {/* Card 3 */}
+          <button className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
+            <CheckCircle className="w-8 h-8 text-neutral-300 group-hover:text-white transition-colors" />
+            <div className="text-center">
+              <h3 className="font-medium text-white">Quizzes</h3>
+              <p className="text-xs text-neutral-400">Topic-based</p>
+            </div>
+          </button>
+
+          {/* Card 4 */}
+          <button className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
+            <Lightbulb className="w-8 h-8 text-neutral-300 group-hover:text-white transition-colors" />
+            <div className="text-center">
+              <h3 className="font-medium text-white">Projects</h3>
+              <p className="text-xs text-neutral-400">Ideas & Specs</p>
+            </div>
+          </button>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+
+    </main>
   );
 }
