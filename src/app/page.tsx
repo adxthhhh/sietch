@@ -1,4 +1,6 @@
 import { Search, FolderOpen, BookOpen, CheckCircle, Lightbulb } from 'lucide-react';
+import Link from 'next/link';
+
 
 export default function Home() {
   return (
@@ -35,40 +37,40 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           
           {/* Card 1 */}
-          <button className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
+          <Link href="/pyqs" className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
             <FolderOpen className="w-8 h-8 text-neutral-300 group-hover:text-white transition-colors" />
             <div className="text-center">
               <h3 className="font-medium text-white">PYQs</h3>
               <p className="text-xs text-neutral-400">Previous Years</p>
             </div>
-          </button>
+          </Link>
 
           {/* Card 2 */}
-          <button className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
+          <Link href="/notes" className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
             <BookOpen className="w-8 h-8 text-neutral-300 group-hover:text-white transition-colors" />
             <div className="text-center">
               <h3 className="font-medium text-white">Notes</h3>
               <p className="text-xs text-neutral-400">Module-wise</p>
             </div>
-          </button>
+          </Link>
 
           {/* Card 3 */}
-          <button className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
+          <Link href="/quizzes" className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
             <CheckCircle className="w-8 h-8 text-neutral-300 group-hover:text-white transition-colors" />
             <div className="text-center">
               <h3 className="font-medium text-white">Quizzes</h3>
               <p className="text-xs text-neutral-400">Topic-based</p>
             </div>
-          </button>
+          </Link>
 
           {/* Card 4 */}
-          <button className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
+          <Link href="/projects" className="glass-card p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all group">
             <Lightbulb className="w-8 h-8 text-neutral-300 group-hover:text-white transition-colors" />
             <div className="text-center">
               <h3 className="font-medium text-white">Projects</h3>
               <p className="text-xs text-neutral-400">Ideas & Specs</p>
             </div>
-          </button>
+          </Link>
 
         </div>
       </div>
