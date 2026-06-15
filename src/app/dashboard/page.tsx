@@ -10,7 +10,7 @@ export default async function DashboardPage() {
     <div className="min-h-screen bg-[#111111] flex text-white font-sans selection:bg-white/20">
       
       {/* 1. Left Navigation Sidebar */}
-      <aside className="w-20 border-r border-white/10 flex flex-col items-center py-8 gap-8 bg-[#161616]/50">
+      <aside className="w-20 flex flex-col items-center py-8 gap-8 bg-[#111111]">
         <div className="p-3 bg-white/5 border border-white/10 rounded-xl mb-4">
           <LayoutDashboard className="w-5 h-5 text-white/70" />
         </div>
