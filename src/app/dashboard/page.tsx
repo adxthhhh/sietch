@@ -41,7 +41,7 @@ export default async function DashboardPage() {
         {/* Top Header Row */}
         <div className="flex justify-between items-start mb-12">
           <div className="text-white/50 text-sm font-medium tracking-wide">
-            Monday, 15 June 2026 <span className="mx-2">•</span> Semester 1
+            Monday, 15 June 2026 <span className="mx-2">•</span> Semester 3
           </div>
           <div className="flex items-center gap-4">
             <button className="p-2 text-white/40 hover:text-white transition-colors">
